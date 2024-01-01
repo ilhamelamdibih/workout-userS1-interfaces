@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:workout_health_front_end/constant/colors.dart';
 import 'package:workout_health_front_end/constant/images.dart';
+import 'package:workout_health_front_end/view/chat.view.dart';
 import 'package:workout_health_front_end/widgets/simple.card.dart';
 import 'package:workout_health_front_end/widgets/text.form.global.dart';
 
@@ -31,7 +32,11 @@ class _ProfilePageState extends State<ProfilePage> {
         backgroundColor: Colors.white,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+               Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                            return const ChatPage();
+                          }));
+            },
             icon: const Icon(
               Icons.sms_outlined,
               color: pPrimapryColor,
